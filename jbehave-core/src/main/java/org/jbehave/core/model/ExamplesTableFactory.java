@@ -55,6 +55,11 @@ public class ExamplesTableFactory {
     }
 
     public ExamplesTableFactory(Keywords keywords, ResourceLoader resourceLoader,
+            ParameterConverters parameterConverters) {
+    	this(keywords, resourceLoader, parameterConverters, new TableTransformers());
+    }
+    
+    public ExamplesTableFactory(Keywords keywords, ResourceLoader resourceLoader,
             ParameterConverters parameterConverters, TableTransformers tableTranformers) {
         this.keywords = keywords;
         this.resourceLoader = resourceLoader;
